@@ -30,7 +30,7 @@ COPY --from=build-stage /app/public ./public
 # RUN  npm install -g pnpm && npm cache clean --force && npm config set cache /cache
 
 # 暴露端口
-EXPOSE 3000
+EXPOSE 4141
 
 # 运行 standalone 服务器
 CMD ["node", "server.js"]

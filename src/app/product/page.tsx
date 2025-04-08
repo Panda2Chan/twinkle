@@ -7,7 +7,14 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { works } from '@/data/work'
-import { ArrowRight, ExternalLink, Github, Grape, Mail } from 'lucide-react'
+import {
+  ArrowRight,
+  Ellipsis,
+  ExternalLink,
+  Github,
+  Grape,
+  Mail,
+} from 'lucide-react'
 import Image from 'next/image'
 
 export default function Product() {
@@ -17,8 +24,8 @@ export default function Product() {
         id="works"
         className="py-20"
       >
-        <h2 className="mb-12 text-center text-4xl font-bold text-white">
-          Featured Works
+        <h2 className="mb-16 text-center text-4xl font-bold text-white">
+          一些也许你会感兴趣的项目
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {works.map((work, index) => (
@@ -84,6 +91,9 @@ export default function Product() {
         </div>
       </section>
 
+      <section className="flex justify-center py-20">
+        <Ellipsis />
+      </section>
       <section className="py-20 text-center">
         <div className="mx-auto max-w-2xl px-4">
           <h2 className="mb-6 text-3xl font-bold text-white">
