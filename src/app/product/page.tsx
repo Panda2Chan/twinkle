@@ -15,7 +15,6 @@ import {
   Grape,
   Mail,
 } from 'lucide-react'
-import Image from 'next/image'
 
 export default function Product() {
   return (
@@ -123,7 +122,7 @@ export default function Product() {
                 <DialogHeader>
                   <DialogTitle>Hi !</DialogTitle>
                   <DialogDescription>
-                    <Image
+                    <img
                       src="/wechat.webp"
                       width={100}
                       height={100}
