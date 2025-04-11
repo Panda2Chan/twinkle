@@ -113,14 +113,14 @@ export default function Product() {
             </a>
             <Dialog>
               <DialogTrigger>
-                <a className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-gray-200">
+                <a className="group inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-gray-200">
                   <Grape className="h-5 w-5" />
                   或者微信？
                 </a>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Hi !</DialogTitle>
+                  <DialogTitle>Hi!</DialogTitle>
                   <DialogDescription>
                     <img
                       src="/wechat.webp"

@@ -1,4 +1,5 @@
 import { interests } from '@/data/interest'
+import { Activity } from 'lucide-react'
 import Link from 'next/link'
 function App() {
   return (
@@ -62,6 +63,16 @@ function App() {
               查看作品集
             </Link>
           </div>
+
+          <a
+            href="/star"
+            className="group mt-20 flex cursor-pointer justify-center gap-3 transition-all duration-300 hover:scale-105"
+          >
+            <Activity className="transition-transform duration-300 group-hover:rotate-12" />
+            <span className="transition-opacity duration-300 group-hover:opacity-80">
+              来自母星的信号
+            </span>
+          </a>
         </div>
       </div>
     </>
