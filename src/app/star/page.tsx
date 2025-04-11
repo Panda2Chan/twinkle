@@ -9,6 +9,9 @@ const NASA_API_MAP = {
   APOD: 'https://api.nasa.gov/planetary/apod',
 }
 
+// 添加缓存时间（单位：秒）
+const CACHE_TIME = 60 * 60 // 1小时
+
 /**
  * https://api.nasa.gov/
  */
@@ -42,9 +45,12 @@ export default async function Star({ searchParams }: Common.IPageProps) {
   if (date) params.set('date', date as string)
 
   const apiUrl = `${NASA_API_MAP.APOD}?${params.toString()}`
-  const res = await fetch(apiUrl)
+  const res = await fetch(apiUrl, {
+    next: {
+      revalidate: CACHE_TIME,
+    },
+  })
   const data = await res.json()
-  console.log(data)
 
   if (!data?.url) {
     return (
