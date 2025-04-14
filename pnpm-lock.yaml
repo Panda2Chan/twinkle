@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@datadog/browser-rum':
+        specifier: ^6.6.3
+        version: 6.6.3
       '@radix-ui/react-dialog':
         specifier: ^1.1.6
         version: 1.1.6(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -90,6 +93,20 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  '@datadog/browser-core@6.6.3':
+    resolution: {integrity: sha512-ywuDDWpDwfygFfCAeV9DJEPbKc7kldHPfHlJl/7uqqOQ4NabiFSSH92hSRZIe1F1tKKmf23IX7wvZKATeNeAEA==}
+
+  '@datadog/browser-rum-core@6.6.3':
+    resolution: {integrity: sha512-Kg7TTl5t3TdqsSApINwOy7cwmo6b/m1QPQtunr7Uy5Fb+MHGgbzJ4JGy926tNb53vi3Zd3EpBmJB9hg4ub2pvQ==}
+
+  '@datadog/browser-rum@6.6.3':
+    resolution: {integrity: sha512-3bKMQX/hnMwgnvyGjmHXwQw7ykMH86MHmn/G4rPy0WISofEwUkSm9zJYcxUyHwY4+kjLUS/N3FDzZx99ZEMz5w==}
+    peerDependencies:
+      '@datadog/browser-logs': 6.6.3
+    peerDependenciesMeta:
+      '@datadog/browser-logs':
+        optional: true
 
   '@emnapi/core@1.3.1':
     resolution: {integrity: sha512-pVGjBIt1Y6gg3EJN8jTcfpP/+uuRksIo055oE/OBkDNcjZqVbfkWCksG1Jp4yZnj3iKWyWX8fdG/j6UDYPbFog==}
@@ -2075,6 +2092,17 @@ packages:
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
+
+  '@datadog/browser-core@6.6.3': {}
+
+  '@datadog/browser-rum-core@6.6.3':
+    dependencies:
+      '@datadog/browser-core': 6.6.3
+
+  '@datadog/browser-rum@6.6.3':
+    dependencies:
+      '@datadog/browser-core': 6.6.3
+      '@datadog/browser-rum-core': 6.6.3
 
   '@emnapi/core@1.3.1':
     dependencies:

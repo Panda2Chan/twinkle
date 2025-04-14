@@ -1,8 +1,10 @@
+import { RumInit } from '@/providers/RumProvider'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import Footer from './_footer'
 import Header from './_header'
 import './globals.css'
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -34,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <RumInit />
         <div className="min-h-screen bg-black text-white">
           <Header />
           <main className="container mx-auto pt-12">{children}</main>
