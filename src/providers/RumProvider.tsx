@@ -11,7 +11,7 @@ export function RumInit() {
       // see https://docs.datadoghq.com/getting_started/site/
       site: 'ap1.datadoghq.com',
       service: 'twinkle',
-      env: process.env.NEXT_PUBLIC_ENV || 'development',
+      env: process.env.NODE_ENV || 'development',
       // Specify a version number to identify the deployed version of your application in Datadog
       // version: '1.0.0',
       sessionSampleRate: 100,

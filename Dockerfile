@@ -18,6 +18,9 @@ RUN pnpm run build
 # Production stage
 FROM node:20.18.1-alpine AS production-stage
 
+# 设置生产环境变量
+ENV NODE_ENV=production
+
 # 指定工作目录
 WORKDIR /app
 
