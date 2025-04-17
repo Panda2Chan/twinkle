@@ -44,7 +44,7 @@ export const works = [
     id: '4',
     title: 'MT Pay',
     description:
-      '一个加密货币钱包，,配套管理后台、数据后台、客服后台,支持c2c交易，主要服务海外市场',
+      '一个加密货币钱包，配套管理后台、数据后台、客服后台,支持c2c交易，主要服务海外市场',
     image:
       'https://images.unsplash.com/photo-1634024520691-251d965aef54?q=80&w=2748&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     technologies: [

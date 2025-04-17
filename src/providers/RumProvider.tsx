@@ -5,8 +5,8 @@ import { useEffect } from 'react'
 export function RumInit() {
   useEffect(() => {
     datadogRum.init({
-      applicationId: '84d18af3-778e-4a29-a0ff-5532fa92636c',
-      clientToken: 'pub8ef921fddf8bc03411dadfc633e4ce29',
+      applicationId: process.env.NEXT_PUBLIC_DATADOG_APP_ID || '',
+      clientToken: process.env.NEXT_PUBLIC_DATADOG_CLIENT_TOKEN || '',
       // `site` refers to the Datadog site parameter of your organization
       // see https://docs.datadoghq.com/getting_started/site/
       site: 'ap1.datadoghq.com',
